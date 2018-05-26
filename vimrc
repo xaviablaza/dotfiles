@@ -48,6 +48,7 @@ augroup vimrcEx
   if g:has_async
     set updatetime=1000
     let g:ale_lint_on_text_changed = 0
+    let g:ale_set_highlights = 0
     autocmd CursorHold * call ale#Lint()
     autocmd CursorHoldI * call ale#Lint()
     autocmd InsertEnter * call ale#Lint()
@@ -91,8 +92,8 @@ if executable('ag')
 endif
 
 " Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
+" set textwidth=80
+" set colorcolumn=+1
 
 " Numbers
 set number
@@ -162,4 +163,10 @@ set diffopt+=vertical
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
+endif
+
+" Theme
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
 endif

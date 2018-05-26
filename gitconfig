@@ -15,10 +15,9 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-[merge]
-  ff = only
 [commit]
   template = ~/.gitmessage
+  gpgsign = true
 [fetch]
   prune = true
 [rebase]
@@ -27,3 +26,7 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+[user]
+	name = AJ Villalobos
+  email = hi@ajvillalobos.com
+  signingkey = 4FC7A1C55330DD0B
