@@ -55,3 +55,5 @@ if [ -f '/Users/ajvillalobos/google-cloud-sdk/path.zsh.inc' ]; then source '/Use
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ajvillalobos/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ajvillalobos/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(fasd --init auto)"
