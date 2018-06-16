@@ -37,6 +37,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
 Plug 'chriskempson/base16-vim'
+Plug 'NLKNguyen/copy-cut-paste.vim'
 
 if g:has_async
   Plug 'w0rp/ale'
