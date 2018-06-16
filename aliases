@@ -17,3 +17,10 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+# etc
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
+# printfriendly
+alias pfweb="docker-compose run --rm --service-ports --name web web bash"
+alias pfsidekiq="docker-compose run --rm --service-ports --name sidekiq sidekiq bash"
