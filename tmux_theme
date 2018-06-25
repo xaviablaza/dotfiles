@@ -1,0 +1,4 @@
+set-option -g status-bg black
+set-option -g status-fg brightblue
+set-window-option -g window-status-current-bg black
+set-window-option -g window-status-current-fg yellow

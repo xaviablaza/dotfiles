@@ -7,6 +7,7 @@ alias v="$VISUAL"
 
 # Bundler
 alias b="bundle"
+alias be="bundle exec"
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
@@ -22,5 +23,9 @@ alias path='echo $PATH | tr -s ":" "\n"'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 # printfriendly
-alias pfweb="docker-compose run --rm --service-ports --name web web bash"
-alias pfsidekiq="docker-compose run --rm --service-ports --name sidekiq sidekiq bash"
+alias pfweb="docker-compose run --rm --service-ports --no-deps --name web web bash"
+alias pfsidekiq="docker-compose run --rm --service-ports --no-deps --name sidekiq sidekiq bash"
+alias pftest="docker-compose -f docker-compose.yml -f docker-compose-test.yml up web-test"
+
+# kubernetes
+alias kdeploy="kubernetes-deploy"

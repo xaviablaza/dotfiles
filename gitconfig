@@ -12,9 +12,17 @@
   co = checkout
   pf = push --force-with-lease
   st = status
+  lg = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  brd = branch -D
+  rb = rebase
+  br = branch
+  ap = add -p
+  dc = diff --cached
+  lgbr = cherry -v master
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
+  editor = vim
 [commit]
   template = ~/.gitmessage
   gpgsign = true

@@ -96,8 +96,9 @@ endif
 " set colorcolumn=+1
 
 " Numbers
-set number
+set number relativenumber
 set numberwidth=5
+set colorcolumn=81
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -124,11 +125,11 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-test mappings
-nnoremap <silent> <Leader>t :TestFile<CR>
-nnoremap <silent> <Leader>s :TestNearest<CR>
-nnoremap <silent> <Leader>l :TestLast<CR>
-nnoremap <silent> <Leader>a :TestSuite<CR>
-nnoremap <silent> <Leader>gt :TestVisit<CR>
+nnoremap <Leader>t :TestFile<CR>
+nnoremap <Leader>s :TestNearest<CR>
+nnoremap <Leader>l :TestLast<CR>
+nnoremap <Leader>a :TestSuite<CR>
+nnoremap <Leader>gt :TestVisit<CR>
 
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<Space>
@@ -166,7 +167,11 @@ if filereadable($HOME . "/.vimrc.local")
 endif
 
 " Theme
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+set background=light
+colorscheme solarized
+
+" Font
+set guifont=Inconsolata-g\ for\ Powerline:h14
+
+" Remove scrollbars in macvim
+set guioptions=

@@ -2,7 +2,6 @@
 *.sw[nop]
 .bundle
 .byebug_history
-.env
 db/*.sqlite3
 log/*.log
 rerun.txt
@@ -12,3 +11,5 @@ tmp/**/*
 !tmp/cache/.keep
 *.pyc
 .tool-versions
+dump.rdb
+.vscode/
