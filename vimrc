@@ -167,11 +167,16 @@ if filereadable($HOME . "/.vimrc.local")
 endif
 
 " Theme
-set background=light
-colorscheme solarized
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 " Font
 set guifont=Inconsolata-g\ for\ Powerline:h14
 
 " Remove scrollbars in macvim
 set guioptions=
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+

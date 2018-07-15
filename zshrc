@@ -47,8 +47,8 @@ _load_settings "$HOME/.zsh/configs"
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# BASE16_SHELL=$HOME/.config/base16-shell/
-# [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ajvillalobos/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ajvillalobos/google-cloud-sdk/path.zsh.inc'; fi
@@ -64,4 +64,11 @@ hitch() {
 }
 alias unhitch='hitch -u'
 
+export PATH=/snap/bin:$PATH
 eval "$(direnv hook zsh)"
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+export PATH="$(yarn global bin):$PATH"

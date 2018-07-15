@@ -20,7 +20,7 @@
   dc = diff --cached
   lgbr = cherry -v master
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /home/xavi/.gitignore_global
   autocrlf = input
   editor = vim
 [commit]
@@ -35,6 +35,6 @@
 [diff]
   colorMoved = zebra
 [user]
-	name = AJ Villalobos
-  email = hi@ajvillalobos.com
-  signingkey = 4FC7A1C55330DD0B
+	name = Xavi Ablaza
+  email = xlablaza@gmail.com
+  signingkey = 7059363954EA36B2
