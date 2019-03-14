@@ -4,6 +4,8 @@ alias ln="ln -v"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
+alias glo="git log --oneline"
+alias gdc="git diff --cached"
 
 # Bundler
 alias b="bundle"
@@ -29,3 +31,9 @@ alias pftest="docker-compose -f docker-compose.yml -f docker-compose-test.yml up
 
 # kubernetes
 alias kdeploy="kubernetes-deploy"
+alias dkc="docker-compose"
+
+alias gbr="git branch | grep -v "master" | xargs git branch -D"
+
+alias nc="nordvpn connect"
+alias nd="nordvpn disconnect"
