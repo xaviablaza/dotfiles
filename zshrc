@@ -50,12 +50,6 @@ _load_settings "$HOME/.zsh/configs"
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ajvillalobos/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ajvillalobos/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ajvillalobos/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ajvillalobos/google-cloud-sdk/completion.zsh.inc'; fi
-
 eval "$(fasd --init auto)"
 
 hitch() {
@@ -72,3 +66,9 @@ eval "$(direnv hook zsh)"
 . $HOME/.asdf/completions/asdf.bash
 
 export PATH="$(yarn global bin):$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/xavi/google-cloud-sdk/path.zsh.inc' ]; then . '/home/xavi/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/xavi/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/xavi/google-cloud-sdk/completion.zsh.inc'; fi
